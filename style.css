@@ -110,7 +110,18 @@ section{
 
 .home .content p{
   margin-bottom: 65px;
+  font-size: 1.2em;
 }
+
+.home .content .services {
+
+  margin-top: -50px;
+  font-size: 1.2em;
+  
+}
+
+
+
 
 .home .content a{
   background: #fff;
