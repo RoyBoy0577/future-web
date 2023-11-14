@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
-header{
+header {
   z-index: 999;
   position: absolute;
   top: 0;
@@ -20,7 +20,7 @@ header{
   transition: 0.5s ease;
 }
 
-header .brand{
+header .brand {
   color: #fff;
   font-size: 1.5em;
   font-weight: 700;
@@ -28,11 +28,11 @@ header .brand{
   text-decoration: none;
 }
 
-header .navigation{
+header .navigation {
   position: relative;
 }
 
-header .navigation .navigation-items a{
+header .navigation .navigation-items a {
   position: relative;
   color: #fff;
   font-size: 1em;
@@ -42,8 +42,8 @@ header .navigation .navigation-items a{
   transition: 0.3s ease;
 }
 
-header .navigation .navigation-items a:before{
-  content: '';
+header .navigation .navigation-items a:before {
+  content: "";
   position: absolute;
   background: #fff;
   width: 0;
@@ -53,27 +53,27 @@ header .navigation .navigation-items a:before{
   transition: 0.3s ease;
 }
 
-header .navigation .navigation-items a:hover:before{
+header .navigation .navigation-items a:hover:before {
   width: 100%;
 }
 
-section{
+section {
   padding: 100px 200px;
 }
 
-.home{
+.home {
   position: relative;
   width: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background: #2696E9;
+  background: #2696e9;
 }
 
-.home:before{
+.home:before {
   z-index: 777;
-  content: '';
+  content: "";
   position: absolute;
   background: rgba(3, 96, 251, 0.3);
   width: 100%;
@@ -82,19 +82,20 @@ section{
   left: 0;
 }
 
-.home .content{
+.home .content {
   z-index: 888;
   color: #fff;
   width: 70%;
   margin-top: 50px;
   display: none;
+  z-index: 999;
 }
 
-.home .content.active{
+.home .content.active {
   display: block;
 }
 
-.home .content h1{
+.home .content h1 {
   font-size: 4em;
   font-weight: 900;
   text-transform: uppercase;
@@ -103,37 +104,32 @@ section{
   margin-bottom: 40px;
 }
 
-.home .content h1 span{
+.home .content h1 span {
   font-size: 1.2em;
   font-weight: 600;
 }
 
-.home .content p{
+.home .content p {
   margin-bottom: 65px;
   font-size: 1.2em;
 }
 
 .home .content .services {
-
   margin-top: -50px;
   font-size: 1.2em;
-  
 }
 
-
-
-
-.home .content a{
+.home .content a {
   background: #fff;
   padding: 15px 35px;
-  color: #1680AC;
+  color: #1680ac;
   font-size: 1.1em;
   font-weight: 500;
   text-decoration: none;
   border-radius: 2px;
 }
 
-.home .media-icons{
+.home .media-icons {
   z-index: 888;
   position: absolute;
   right: 30px;
@@ -142,21 +138,21 @@ section{
   transition: 0.5s ease;
 }
 
-.home .media-icons a{
+.home .media-icons a {
   color: #fff;
   font-size: 1.6em;
   transition: 0.3s ease;
 }
 
-.home .media-icons a:not(:last-child){
+.home .media-icons a:not(:last-child) {
   margin-bottom: 20px;
 }
 
-.home .media-icons a:hover{
+.home .media-icons a:hover {
   transform: scale(1.3);
 }
 
-.home video{
+.home video {
   z-index: 000;
   position: absolute;
   top: 0;
@@ -166,8 +162,8 @@ section{
   object-fit: cover;
 }
 
-.slider-navigation{
-  z-index: 888;
+.slider-navigation {
+  z-index: 999;
   position: relative;
   display: flex;
   justify-content: center;
@@ -176,7 +172,7 @@ section{
   margin-bottom: 12px;
 }
 
-.slider-navigation .nav-btn{
+.slider-navigation .nav-btn {
   width: 12px;
   height: 12px;
   background: #fff;
@@ -186,48 +182,49 @@ section{
   transition: 0.3s ease;
 }
 
-.slider-navigation .nav-btn.active{
-  background: #2696E9;
+.slider-navigation .nav-btn.active {
+  background: #2696e9;
 }
 
-.slider-navigation .nav-btn:not(:last-child){
+.slider-navigation .nav-btn:not(:last-child) {
   margin-right: 20px;
 }
 
-.slider-navigation .nav-btn:hover{
+.slider-navigation .nav-btn:hover {
   transform: scale(1.2);
 }
 
-.video-slide{
+.video-slide {
+  z-index: -1;
   position: absolute;
   width: 100%;
   clip-path: circle(0% at 0 50%);
 }
 
-.video-slide.active{
+.video-slide.active {
   clip-path: circle(150% at 0 50%);
   transition: 2s ease;
   transition-property: clip-path;
 }
 
-@media (max-width: 1040px){
-  header{
+@media (max-width: 1040px) {
+  header {
     padding: 12px 20px;
   }
 
-  section{
+  section {
     padding: 100px 20px;
   }
 
-  .home .media-icons{
+  .home .media-icons {
     right: 15px;
   }
 
-  header .navigation{
+  header .navigation {
     display: none;
   }
 
-  header .navigation.active{
+  header .navigation.active {
     position: fixed;
     width: 100%;
     height: 100vh;
@@ -239,18 +236,18 @@ section{
     background: rgba(1, 1, 1, 0.5);
   }
 
-  header .navigation .navigation-items a{
+  header .navigation .navigation-items a {
     color: #222;
     font-size: 1.2em;
     margin: 20px;
   }
 
-  header .navigation .navigation-items a:before{
+  header .navigation .navigation-items a:before {
     background: #222;
     height: 5px;
   }
 
-  header .navigation.active .navigation-items{
+  header .navigation.active .navigation-items {
     background: #fff;
     width: 600px;
     max-width: 600px;
@@ -263,8 +260,8 @@ section{
     box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
   }
 
-  .menu-btn{
-    background: url(menu.png)no-repeat;
+  .menu-btn {
+    background: url(menu.png) no-repeat;
     background-size: 30px;
     background-position: center;
     width: 40px;
@@ -273,18 +270,44 @@ section{
     transition: 0.3s ease;
   }
 
-  .menu-btn.active{
+  .menu-btn.active {
     z-index: 999;
-    background: url(close.png)no-repeat;
+    background: url(close.png) no-repeat;
     background-size: 25px;
     background-position: center;
     transition: 0.3s ease;
   }
 }
 
-@media (max-width: 560px){
-  .home .content h1{
+@media (max-width: 560px) {
+  .home .content h1 {
     font-size: 3em;
     line-height: 60px;
   }
+}
+
+.bullet-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 2px;
+  background: #1680ac;
+  transition: 0.3s ease;
+}
+
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(1, 1, 1, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
 }

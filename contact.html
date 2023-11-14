@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Responsive Website Landing Page - With Background Video Slider | Travel
+    </title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="brand">Travel</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="/">Home</a>
+          <a href="/portfolio">Portfolio</a>
+          <a href="/contact">Contact Us</a>
+        </div>
+      </div>
+    </header>
+    <section class="home">
+      <div class="overlay"></div>
+      <video
+        class="video-slide active"
+        src="./Assets/Hands.mp4"
+        autoplay
+        muted
+        loop
+      ></video>
+      <video
+        class="video-slide"
+        src="./Assets/Coffee.mp4"
+        autoplay
+        muted
+        loop
+      ></video>
+      <video
+        class="video-slide"
+        src="./Assets/carefree-people-in-colored-smoke-enjoying-nature-2022-08-03-20-20-39-utc.mp4"
+        autoplay
+        muted
+        loop
+      ></video>
+      <video class="video-slide" src="4.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="5.mp4" autoplay muted loop></video>
+      <div class="content active">
+        <h1>Contact Us</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. At excepturi
+          recusandae repudiandae quisquam saepe voluptas optio sit repellat,
+          suscipit laboriosam deleniti ea iure eligendi minima dignissimos
+          veniam nostrum animi dolor voluptate. Voluptate itaque minima corrupti
+          cumque earum impedit vero molestiae autem velit dolorem in assumenda
+          enim exercitationem odio sit, quasi modi deleniti obcaecati
+          dignissimos eum cupiditate nostrum iure labore. Quos ex perferendis
+          delectus beatae facilis, in voluptas nemo odit blanditiis voluptatibus
+          corporis dolorem eligendi? Eligendi soluta, laboriosam assumenda magni
+          culpa, cupiditate blanditiis, eaque itaque necessitatibus voluptatibus
+          hic quia dignissimos vitae?
+        </p>
+
+        <br />
+        <!-- <a href="#">Read More</a> -->
+      </div>
+      <div class="content">
+        <h1>Human-centered <br /><span>digital experiences</span></h1>
+        <h2>
+          <strong>
+            At Umain, we design digital experiences that connect with your
+            audience on a human level
+          </strong>
+        </h2>
+        <p>
+          We start by understanding your unique brand and audience.<br />
+          Then, we use storytelling, visual storytelling, micro-interactions,
+          and personalization to create digital experiences that evoke emotion
+          and build relationships. We believe that digital experiences should be
+          more than just functional. They should be meaningful and leave a
+          lasting impression. That's why we design websites and apps that touch
+          the human heart
+        </p>
+        <!-- <a href="#">Read More</a> -->
+      </div>
+      <div class="content">
+        <h1>Emotional Branding<br /><span></span></h1>
+        <h2>
+          <strong>
+            Create a brand that connects with your audience on a human level
+          </strong>
+        </h2>
+        <p>
+          Your brand is more than just your logo and tagline. It's the way your
+          company makes people feel. At Umain.life, we help you create
+          authentic, meaningful, and emotionally resonant branding that will
+          make people feel in a way that correlates with your brand. Remember,
+          your brand is here to serve a purpose - helping people.
+        </p>
+        <!-- <a href="#">Read More</a> -->
+      </div>
+      <div class="content">
+        <h1>Road Trip.<br /><span>Together</span></h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Feel Nature.<br /><span>Relax</span></h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+      //Javacript for responsive navigation menu
+      const menuBtn = document.querySelector(".menu-btn");
+      const navigation = document.querySelector(".navigation");
+
+      menuBtn.addEventListener("click", () => {
+        menuBtn.classList.toggle("active");
+        navigation.classList.toggle("active");
+      });
+
+      //Javacript for video slider navigation
+      const btns = document.querySelectorAll(".nav-btn");
+      const slides = document.querySelectorAll(".video-slide");
+      const contents = document.querySelectorAll(".content");
+
+      var sliderNav = function (manual) {
+        btns.forEach((btn) => {
+          btn.classList.remove("active");
+        });
+
+        slides.forEach((slide) => {
+          slide.classList.remove("active");
+        });
+
+        contents.forEach((content) => {
+          content.classList.remove("active");
+        });
+
+        btns[manual].classList.add("active");
+        slides[manual].classList.add("active");
+        contents[manual].classList.add("active");
+      };
+
+      btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+          sliderNav(i);
+        });
+      });
+    </script>
+  </body>
+</html>
